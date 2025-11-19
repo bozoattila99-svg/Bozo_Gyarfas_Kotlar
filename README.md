@@ -3,3 +3,6 @@
 Bozo Attila Peter
 Kotlar Matyas Levente
 Gyarfas-Tot Peter
+
+
+https://www.aelius.com/njh/subnet_sheet.html
