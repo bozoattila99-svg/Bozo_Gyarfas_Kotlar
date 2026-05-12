@@ -1,0 +1,178 @@
+1. Ati (1-5. dia)
+1. dia
+
+“Üdvözlünk mindenkit. A prezentációnk témája egy vállalati hálózati infrastruktúra tervezése és szimulációja Cisco Packet Tracer környezetben.
+A célunk egy skálázható, biztonságos és redundáns hálózat kialakítása volt, amely több telephely működését is képes támogatni.”
+
+2. dia
+
+“A projekt során egy közepes vállalat három telephelyes hálózatát terveztük meg.
+A rendszer támogatja az irodai, gyártási és IoT funkciókat is.
+A projektben minden csapattagnak külön feladata volt, például hálózattervezés, dokumentáció és konfiguráció.”
+
+3. dia
+
+“A hálózat tervezésénél fontos szempont volt a magas rendelkezésre állás és a biztonság.
+Ezért redundáns megoldásokat, VLAN szegmentációt, valamint tűzfalas védelmet alkalmaztunk.
+A rendszer skálázható, így később könnyen bővíthető.”
+
+4. dia
+
+“A hálózat három telephelyből áll.
+A központi iroda végzi a menedzsmentet és a fő szolgáltatásokat.
+Az északi telephely a gyártási rendszereket kezeli, míg a déli telephely az IoT és vezeték nélküli technológiák bemutatására szolgál.”
+
+5. dia
+
+“Minden telephely külön hardver- és szolgáltatásstruktúrával rendelkezik.
+A központban routerek, switchek és ASA tűzfal működik, míg a déli telephelyen például Raspberry Pi alapú IoT rendszer található.
+A hálózat külön VLAN-okra van bontva a jobb biztonság és forgalomkezelés érdekében.”
+
+Matyi (6-10. dia)
+6. dia
+
+“A logikai szegmentáció VLAN-ok segítségével történt.
+Minden részleg külön hálózati szegmenst kapott, például adminisztráció, vendéghálózat és IoT.
+Az inter-VLAN kommunikáció ACL szabályokkal szabályozott Router-on-a-stick topológián keresztül működik.”
+
+7. dia
+
+“A hálózat dinamikus útválasztást használ OSPF protokoll segítségével.
+A gyors konvergencia biztosítja, hogy hiba esetén a hálózat gyorsan alkalmazkodjon.
+A HSRP redundancia lehetővé teszi az automatikus átállást egy tartalék routerre meghibásodás esetén.”
+
+8. dia
+
+“A biztonság több rétegben valósul meg.
+Az ASA 5505 tűzfal szűri a külső forgalmat, míg az ACL-ek pontos hozzáférés-szabályozást biztosítanak.
+A VLAN izoláció elkülöníti a különböző hálózati szegmenseket, például a vendéghálózatot.”
+
+9. dia
+
+“A telephelyek közötti kommunikáció MPLS és IPsec VPN segítségével történik.
+Az MPLS biztosítja a gyors és prioritásalapú adatátvitelt, míg az IPsec VPN titkosított kapcsolatot hoz létre a nyilvános hálózaton keresztül.
+Az adatbiztonságot AES-256 titkosítás védi.”
+
+10. dia
+
+“Az IoT infrastruktúra központi eleme egy Raspberry Pi 5 szerver.
+Ez futtatja a Home Assistant rendszert és az MQTT brokert.
+Az IoT eszközök titkosított MQTT kommunikációt használnak, és ACL szabályok korlátozzák a hozzáférést.”
+
+3. Peti (11-14. dia)
+11. dia
+
+“A szerver-infrastruktúra Linux és Windows környezetet is használ.
+A Linux rendszer DHCP, DNS és webszolgáltatásokat biztosít, míg a Windows környezet Active Directory és Single Sign-On funkciókat kezel.
+Ez központi felhasználó- és jogosultságkezelést tesz lehetővé.”
+
+12. dia
+
+“A teljes hálózat Cisco Packet Tracer környezetben lett szimulálva és tesztelve.
+A szimuláció lehetővé tette az útvonalak, ACL-ek és NAT szabályok biztonságos ellenőrzését.
+Ez segített a hibák korai felismerésében.”
+
+13. dia
+
+“A rendszer működését ping és traceroute tesztekkel ellenőriztük.
+Vizsgáltuk az útválasztás helyességét és a VLAN-ok közötti izolációt is.
+A sikertelen hozzáférési próbák igazolták, hogy az ACL szabályok megfelelően működnek.”
+
+14. dia
+
+“Összességében a projektünk egy modern, biztonságos és skálázható vállalati hálózatot mutat be.
+A rendszer támogatja a hagyományos vállalati szolgáltatásokat és az IoT technológiákat is.
+A tervezett architektúra hosszú távon is stabil alapot biztosíthat egy vállalat számára.
+Köszönjük a figyelmet.”
+
+
+
+
+
+PERSON 1 (Slides 1-5)
+Slide 1
+
+“Hello everyone.
+Our presentation is about the design and simulation of an enterprise network infrastructure using Cisco Packet Tracer.
+The main goal of the project was to create a scalable, secure, and redundant network capable of supporting multiple company sites.”
+
+Slide 2
+
+“During the project, we designed a network for a medium-sized company with three different sites.
+The system supports office operations, industrial environments, and IoT functionalities as well.
+Each team member had a specific responsibility, such as network design, documentation, or configuration.”
+
+Slide 3
+
+“While designing the network, high availability and security were important priorities.
+For this reason, we implemented redundant solutions, VLAN segmentation, and firewall protection.
+The system is scalable, which means it can be expanded easily in the future.”
+
+Slide 4
+
+“The network consists of three different locations.
+The headquarters handles management and the main services.
+The northern site is responsible for industrial systems, while the southern site demonstrates IoT and wireless technologies.”
+
+Slide 5
+
+“Each site has its own hardware and service structure.
+The headquarters includes routers, switches, and an ASA firewall, while the southern site contains a Raspberry Pi based IoT system.
+The network is divided into multiple VLANs for better security and traffic management.”
+
+PERSON 2 (Slides 6-10)
+Slide 6
+
+“Logical segmentation was implemented using VLANs.
+Each department received its own network segment, such as administration, guest network, and IoT devices.
+Inter-VLAN communication is controlled by ACL rules through a Router-on-a-Stick topology.”
+
+Slide 7
+
+“The network uses dynamic routing with the OSPF protocol.
+Fast convergence ensures that the network quickly adapts in case of failure.
+HSRP redundancy enables automatic failover to a backup router if the primary router becomes unavailable.”
+
+Slide 8
+
+“Security is implemented in multiple layers.
+The ASA 5505 firewall filters external traffic, while ACLs provide precise access control.
+VLAN isolation separates different network segments, such as the guest network.”
+
+Slide 9
+
+“Communication between the sites is established using MPLS and IPsec VPN technologies.
+MPLS provides fast and priority-based data transmission, while the IPsec VPN creates encrypted communication over public networks.
+Data security is protected with AES-256 encryption.”
+
+Slide 10
+
+“The IoT infrastructure is centered around a Raspberry Pi 5 server.
+It runs the Home Assistant platform and the MQTT broker service.
+IoT devices use encrypted MQTT communication, and ACL rules restrict unauthorized access.”
+
+PERSON 3 (Slides 11-14)
+Slide 11
+
+“The server infrastructure includes both Linux and Windows environments.
+The Linux system provides DHCP, DNS, and web services, while the Windows environment manages Active Directory and Single Sign-On features.
+This allows centralized user and permission management.”
+
+Slide 12
+
+“The entire network was simulated and tested in Cisco Packet Tracer.
+The simulation allowed us to safely verify routes, ACLs, and NAT configurations.
+This helped identify possible errors before deployment.”
+
+Slide 13
+
+“The network functionality was verified using ping and traceroute tests.
+We also tested routing accuracy and VLAN isolation.
+Failed access attempts confirmed that the ACL rules were operating correctly.”
+
+Slide 14
+
+“In conclusion, our project demonstrates a modern, secure, and scalable enterprise network.
+The system supports both traditional enterprise services and IoT technologies.
+The designed architecture can provide a stable long-term foundation for a company network.
+Thank you for your attention.”
